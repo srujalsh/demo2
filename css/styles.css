@@ -1,0 +1,195 @@
+/*css reset*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ /*CSS Variables*/
+
+:root{
+  --navbar-height: 59px;}
+
+  /*Navigation Bar*/
+
+  #navbar{
+    display: flex; /*use of flex :- logoimg and 4list automatically comes in a same raw*/
+    align-items: center;
+    position: relative;
+    top: 0px;
+  }
+
+  #navbar ::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* using this that logo img and 4list are hide bcoz of the black color so now its showing us on the black color*/
+    opacity: 0.4;
+  }
+/*Navigation Bar: Logo and Image */
+
+#logo{
+    margin: 10px 34px; /* because of margin create space between logo img nd that 4list*/
+  }
+
+#Logo img{
+  height: 59px; /* its changes the height of the photo*/
+    margin: 3px 6px;
+}
+
+/* Navigation Bar:  4(Home,Services,About us, Contact us)List Styling */
+
+
+#navbar ul{
+  display: flex; /* that 4 lists are comes in one raw */
+  font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{
+
+  list-style: none; /* using this remove that black dotts from every 4list*/
+  font-size: 1.3rem;
+}
+
+
+#navbar ul li a {  /* why we dont give padding in a top? and we give padding in this
+  ui li a ? bcoz if i over a(one list name) element so its over full a element*/
+  color: white;
+  display: block; /* display is block bcoz we have to add padding*/
+  padding: 3px 22px;  /* its create gap between 4 list */
+  border-radius: 20px;
+  text-decoration: none; /* remove that underline of the 4 list*/
+}
+
+#navbar ul li a:hover {  /* if we give hover to 4 list then if we select any list its pointed (showing us background)*/
+  color: black;
+  background-color: white;
+}
+
+/* Home section */
+#home {
+  display: flex; /* h1 and paragraph comes in a raw */
+  flex-direction: column; /* 2nd paragraph comes down means its comes in a column*/
+  padding: 3px 200px; /* heading and paragraph side me aa jayega jo img ke upar aa raha tha*/
+  height: 400px;
+  justify-content: center;
+  align-items: center; /* both use is :- h1 and para comes in a center*/
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../images/home.jpg') no-repeat center center/cover; /* no-repeat center center/cover this thing make home image proper way*/
+    height: 91%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89; /* opacity means images comes lighter*/
+}
+
+#home h1{
+  color: blue;
+  text-align: center;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+#home p{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+font-family: 'Baloo Bhai', cursive;
+}
+
+
+/* Services Classes */
+#services{
+  margin: 34px;
+  display: flex;
+}
+#services .box{  /* this is for 3box*/
+  border: 2px solid brown;
+  padding: 34px;
+  margin: 3px 6px;
+  border-radius: 28px;
+  background: #f2f2f2;
+}
+#services .box img{
+  height: 160px;
+  display: block;
+  margin: auto;  /*margin auto only work when display is block and this margin is for make center img1*/
+}
+#services .box p{
+font-family: 'Baloo Bhai', cursive;
+
+}
+#services{}
+#services{}
+
+/* Clients Section */
+
+#client-section{
+  position: relative;
+  height: 344px;
+}
+
+#client-section ::before{
+  content: "";
+  position: absolute;
+/*  background: url('../images/pg1.jpeg');*/``
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+
+#clients{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-item{
+  padding: 34px;
+
+}
+
+#clients img{
+  height: 100px;
+}
+/* Contact Section*/
+
+
+/*Utility Classes*/
+
+.h-primary{  /* this css for h1 and paragraph*/
+font-family: 'Baloo Bhai', cursive;
+  font-size: 2.8rem;
+  padding: 50px;
+}
+.h-secondary{
+    font-family: 'Baloo Bhai', cursive;
+  font-size: 1.8rem;
+  padding: 12px;
+}
+.btn{  /* css for  Order now button*/
+  padding: 6px 20px;
+  border: 2px solid white;
+  background-color: brown;
+  color: white;
+  margin: 17px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: lightblue;
+}
+.center{
+  text-align: center;
+}
